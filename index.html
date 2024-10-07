@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .A {
+            background-color: green;
+        }
+
+        .A1 {
+            color: white;
+            height: 40px;
+            width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .top-links {
+            width: 200px;
+            display: flex;
+            justify-content: space-around;
+            list-style-type: none;
+        }
+
+        .B {
+            background-color: whitesmoke;
+            height: 1000px;
+        }
+
+        .B1 {
+            background-color: whitesmoke;
+            height: 100px;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            list-style-type: none;
+            width: 900px;
+            
+        }
+
+        .img {
+            width: 50px;
+        }
+
+        .menu {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0%;
+            background-color: #ffffff;
+            margin-left: auto;
+            margin-right: auto;
+            width: 500px;
+        }
+
+        .menu li {
+            display: inline;
+            margin: 15px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .typcn--heart-outline {
+            width: 30px;
+            height: 30px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M12 20a1 1 0 0 1-.561-.172c-.225-.151-5.508-3.73-7.146-5.371C2.462 12.626 2.25 10.68 2.25 9.375A5.38 5.38 0 0 1 7.625 4c1.802 0 3.398.891 4.375 2.256A5.37 5.37 0 0 1 16.375 4a5.38 5.38 0 0 1 5.375 5.375c0 1.305-.212 3.251-2.043 5.082c-1.641 1.641-6.923 5.22-7.146 5.371A1 1 0 0 1 12 20M7.625 6A3.38 3.38 0 0 0 4.25 9.375c0 1.093.173 2.384 1.457 3.668c1.212 1.212 4.883 3.775 6.293 4.746c1.41-.971 5.081-3.534 6.293-4.746c1.284-1.284 1.457-2.575 1.457-3.668C19.75 7.514 18.236 6 16.375 6S13 7.514 13 9.375a1 1 0 1 1-2 0A3.38 3.38 0 0 0 7.625 6'/%3E%3C/svg%3E");
+            background-color: white;
+
+        }
+
+        .marketeq--cart-alt-1 {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 50'%3E%3Cg fill='none' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath stroke='%23344054' stroke-width='3' d='M35.417 42.708h.208m-12.708 0h.208z'/%3E%3Cpath stroke='%23306cfe' stroke-width='2' d='M6.25 6.25h4.833a2.08 2.08 0 0 1 1.938 1.313l7.812 19.52l-2.666 5.313a2.084 2.084 0 0 0 1.875 3.02h19.541'/%3E%3Cpath stroke='%23306cfe' stroke-width='2' d='M15 12.5h28.75l-5.833 14.583H20.833'/%3E%3C/g%3E%3C/svg%3E");
+            padding-right: 40px;
+        }
+
+        .mingcute--headphone-fill {
+            display: inline-block;
+            width: 1em;
+            height: 1em;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cg fill='none'%3E%3Cpath d='m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z'/%3E%3Cpath fill='%23000' d='M20 11.943C20 7.562 16.424 4 12 4s-8 3.562-8 7.943c0 1.19.147 1.955.328 2.516c.122.372.413.005.557-.13a2.5 2.5 0 0 1 3.472.05c1.421 1.412 2.732 3.37.921 5.17c-.972.966-2.436 1.368-3.55.328c-1.438-1.344-2.687-2.908-3.302-4.8C2.17 14.283 2 13.304 2 11.942C2 6.445 6.483 2 12 2s10 4.445 10 9.943c0 1.362-.169 2.341-.426 3.133c-.615 1.893-1.864 3.457-3.302 4.8c-1.114 1.041-2.578.64-3.55-.327c-1.81-1.8-.5-3.758.92-5.17a2.5 2.5 0 0 1 3.473-.05c.277.26.414.57.557.13c.181-.56.328-1.327.328-2.516'/%3E%3C/g%3E%3C/svg%3E");
+            justify-content: space-around;
+            
+            
+            
+        
+
+        }
+
+        .C {
+            background-color: whitesmoke;
+            height: 100px;
+            width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .C1 {
+            flex-direction: row;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .input[type="text"] {
+            border: none;
+            background: aqua;
+            color: aqua;
+            display: flex;
+        }
+
+        .search-bar input {
+            padding-right: 40px;
+            margin-right: auto;
+            margin-left: auto;
+            align-items: center;
+            justify-content: space-between;
+            width: 200px;
+            display: flex;
+            text-decoration: none;
+        }
+
+        .cart-call {
+            padding-left: 600px;
+            margin-right: auto;
+            justify-content: space-between;
+            width: 200px;
+            display: flex;
+            align-items: center;
+            padding: 50px;
+            
+            
+        }
+
+        .D {
+            background-color: whitesmoke;
+            width: 900px;
+            height: 400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .D1 {
+            flex-direction: row;
+            display: flex;
+            
+        }
+        
+
+        .D2 {
+            align-items: center;
+            justify-content: space-between;
+            padding: 30px;
+            width: 1000px;
+        
+        }
+
+        .D3 {
+            width: 900px;
+            margin-right: 40px;
+            
+            
+
+        }
+        #myh1{
+            color: green;
+        }
+        #myh5{
+            color: rgb(47, 128, 0);
+            display: inline-block;
+            border: solid;
+        }
+        #myp{
+        margin-left: -25px;
+        }
+        .E{
+            height: 40px;
+    
+        }
+        .search{
+            position: absolute;
+            left: 500px;
+            top: 150px;
+        }
+        .All-Cat{
+         position: absolute;
+        left: 250px;
+        background-color: green;
+        border: solid;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="A">
+            <div class="A1">
+                <p>England's Fastest Online Shopping Destination.</p>
+                <ul class="top-links">
+                    <select>
+                    <option>My Account</option>
+                    </select>
+                    <select>
+                    <option>USD</option>
+                </select>
+                    <select>
+                    <option>English</option>
+                </select>
+                </ul>
+            </div>
+
+            <div class="B">
+                <div class=B1>
+                    <img src="../Assignment/NEW/CHAIR.jpg" alt="">
+                    <ul class="menu">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Shop</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Pages</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                    <span class="typcn--heart-outline"></span>
+                    <span class="marketeq--cart-alt-1"></span>
+                     <p id="myp">mycart</p>
+                    <span class="fluent--number-circle-2-32-filled"></span>
+                </div>
+                <div class="C">
+                    <div class="C1">
+                        <div class="search-bar">
+                            <div class="All-Cat">
+                                <select>
+                                    <option>ALL CATEGORIES</option>
+                                </select>
+                            </div>
+                            
+                            <input class="search" type="text" placeholder="Search entire store here...">
+                            <div class="cart-call">
+                                <span class="mingcute--headphone-fill"></span>
+                                <p>Call Us:
+                                    <br>
+                                    (999) 1234 56789
+                            </div>
+                            <div class="D">
+                                <div class="D1">
+                                    <div class="D2">
+                                
+                                        <h2>BENTWOOD ARMCHAIR</h2>
+                                        <br>
+                                        <h2>SIMPLE CONTEMPORARY</h2>
+                                        <br>
+                                        <h3>GET UP TO</h3>
+                                        <br>
+                                        <h1 id="myh1">30% OFF</h1>
+                                        <br>
+                                        <h5 id="myh5">SHOP NOW</h5>
+                                    </div>
+                                    <div class="D3">
+                                        <img src="../Assignment/image/BENTWOOD.jpg" alt="">
+                                    </div>
+                                    <div class="E">
+                                        <div class="E1">
+                                        
+                                    </div>
+
+
+
+
+
+                                </div>
+
+
+                            </div>
+
+
+
+
+
+    </header>
+</body>
+
+</html>
